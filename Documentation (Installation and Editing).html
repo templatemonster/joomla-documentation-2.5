@@ -1,0 +1,550 @@
+<!DOCTYPE html><!-- documentation v.0.6 02.03.2012 -->
+<html lang="en">
+<head>
+  <title>Joomla template manual</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="css/reset.css" type="text/css" media="all">
+  <link rel="stylesheet" href="css/style.css" type="text/css" media="all">
+  <link rel="stylesheet" href="css/fonts.css" type="text/css" media="all">
+  <link rel="stylesheet" href="css/prettyPhoto.css" type="text/css" media="all">
+  <script type="text/javascript" src="js/jquery-1.5.1.min.js" ></script>
+  <script type="text/javascript" src="js/jquery.prettyPhoto.js" ></script>
+  <script type="text/javascript">
+  	$(document).ready(function(){
+			// prettyphoto init
+			jQuery("a[rel^='prettyPhoto']").prettyPhoto({
+				animationSpeed:'slow',
+				theme:'facebook',
+				slideshow:false,
+				autoplay_slideshow: false,
+				show_title: true,
+				overlay_gallery: false
+			});
+		});
+  </script>
+  <!--[if lt IE 7]>
+  	<link rel="stylesheet" href="css/ie/ie6.css" type="text/css" media="screen">
+    <script type="text/javascript" src="js/ie_png.js"></script>
+    <script type="text/javascript">
+        ie_png.fix('.png');
+    </script>
+  <![endif]-->
+  <!--[if lt IE 9]>
+  	<script type="text/javascript" src="js/html5.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+  <div id="main">
+  	<div class="inside">
+    	<!-- header -->
+      <header id="header">
+        <div class="inside">
+          <h1>Documentation for Joomla theme<br />
+          (based on gantry framework)</h1>
+        </div>
+      </header>
+      <section id="content">
+        <article>
+          <h2>Table of Contents</h2>
+          <div class="inner">
+          	<ol class="table_content">
+			  <li><a href="#preparations">Preparations</a></li>
+              <li><a href="#getting_started_nojoomla">Complete installation. Joomla Engine + Framework + Joomla theme + Sample data</a></li>
+              <li><a href="#manual-installation">Joomla theme installation with sample data</a></li>
+              	<li><a href="#template-installation">Template Installation</a></li>
+              	<li><a href="#sample-data-installation">Sample Data Installation</a></li>
+              
+              <li><a href="#getting_started_with_working_site">Getting started if you have the site up</a>
+              	<ul>
+                  <li><a href="#framework_install">Framework installation</a></li>
+                  <li><a href="#template_install">Template Installation</a></li>
+                  <li><a href="#theme_act">Template Activation</a></li>
+                  <li><a href="#third_party">Third-party extensions installation</a></li>
+                  <li><a href="#k2_component">K2 Component</a></li>
+                  <li><a href="#modules_configuration">Modules Configuration</a></li>
+                  <li><a href="#images-preview">Images Preview</a></li>
+                  <li><a href="#install_menu">Installing Menu</a></li>
+                  <li><a href="#custom-html">How to add new Custom HTML modules to your template</a></li>
+                </ul>
+              </li>
+              <li><a href="#conclusion">Conclusion</a></li>
+            </ol>
+          </div>
+        </article>
+        
+        
+        <!-- Getting started begin -->
+        <article>
+        
+                  <h2 id="preparations">Preparations</h2>
+                  <div class="inner">
+                  	<p>In order to run Joomla template you need to perform some preparations. </p>
+                    <ol>
+                    	<li><p>First of all you need to download Joomla engine from the official website and <strong>http://joomla.org</strong>. </p>
+                        <p class="notification-box">Please check the template software requirements and make sure you are downloading the required version of Joomla.</p>
+                        <p> From the <a href="http://www.joomla.org/download.html" target="_blank">Downloads</a> page you can get most recent version of Joomla 2.5.</p> 
+                        <p>In case you need earlier versions please use <a href="http://joomlacode.org/gf/project/joomla/frs/?action=index" target="_blank">Download other Joomla </a> packages link </p></li>
+                        
+                        <li>
+                          <p>When the Joomla package is downloaded you need to extract the files from the archive. This can be done using the default archive manager or using such applications as <a href="http://templatemonster.com/help/extract-archived-files-windows-os.html" target="_blank">WinZip (Windows)</a> or <a href="http://templatemonster.com/help/extract-archived-files-mac-os.html" target="_blank">Stuffit Expander (MAC)</a>.</p></li>
+                       
+                        <li><p>Then you need to create a database to store Joomla CMS data. You can create database using your hosting control panel or the phpMyAdmin too in case you are using local server. Feel free to check the details tutorial on <a href="http://templatemonster.com/help/how-create-database.html" target="_blank">how to create database</a>. </p></li>
+                        
+                    </ol>
+                  </div>
+        
+        
+        
+   	  <h2 id="getting_started_nojoomla">Complete installation. Joomla Engine + Framework + Joomla theme + Sample data</h2>
+          
+                    <p class="info-box ">This installation option is used if you doesn't have Joomla installation on your server. Fullpackage.zip archive used in this guide contains Joomla engine and the theme so you don't need to upload Joomla CMS package separately.</p>
+          
+          <div class="inner">
+						<ol>
+							<li><p>As soon as the template is downloaded and unzipped you should upload the archive <em><strong>joomla/fullpackage.zip</strong></em> using any FTP software like <a href="http://filezilla-project.org/download.php?type=client">Filezilla</a> or the Filemanager in your hosting control panel. The detailed tutorial on <a href="http://templatemonster.com/help/how-upload-files-server-2.html" target="_blank">how to upload files</a> can help you in case of any difficulties. </p></li>
+							<li>
+							  <p>When that is done please upload the file<strong> <em>joomla/unzip.php</em></strong> from the template package to the server into the same directory as the previous archive.</p></li>
+							<li><p>As soon as you finish please open your site in the browser and add the file name - <em><strong>unzip.php</strong></em> to the URL. It should look like this: <strong>yourwebsite.com/unzip.php</strong></p></li>
+							<li><p>This is what you get:</p>
+								<p><img alt="" src="images/interface.png"></p></li>
+							<li><p>In the drop-down list <strong>&quot;Choose your zip file&quot;</strong> please select <em><strong>fullpackage.zip</strong></em> and click <strong>&quot;Unzip&quot;</strong>. It will start to uncompress the files on your server into the same directory. It will take a little while.</p></li>
+							<li><p>As soon as it is unzipped, you will see the list of files. Please open your site in the browser, - <strong>yourwebsite.com</strong> and start Joomla installation.</p></li>
+							<li>
+                            <p>On Step 6 in your installation - <strong>&quot;Main Configuration&quot;</strong> it is necessary to select <strong>&quot;sample_theme###&quot;</strong> (<em>where ### is the number of your theme</em>) from the select box and click <strong>&quot;Install Sample Data&quot; </strong>button.</p>
+                            <p class="error-box ">It is vitally important to install Sample data. Please do not ignore this step</p>
+								<p><img alt="" src="images/joomla-sample-data-install.jpg" width="788"></p>
+							</li>
+							<li><p>As soon as the installation is complete, the template with the default content will automatically be activated on your site and will look like the demo on our template preview page.</p></li>
+						</ol>
+                        
+						<p class="error-box">Please note: Installing template sample data you'll have another user with Demo User privileges (full access) added to your database. The sample user login is &quot;demo&quot;, password - &quot;demo123&quot;.</p>
+                        
+						<p>You can delete Demo User though the Joomla administration panel in the <strong>&quot;Users &gt; Users Manager&quot;</strong>. In case you are planning to use sample data we recommend you to change Demo User user login and password. </p>
+						<p>Feel free to check the detailed video tutorial on how to use <a href="http://templatemonster.com/help/joomla-framework-quick-complete-installation.html" target="_blank">Joomla template quick installer</a></p>
+          </div>
+
+
+<h2 id="manual-installation">Joomla theme installation with sample data</h2>
+          <div class="inner">
+          
+               	    <p class="info-box">This installation option is used in case you already have a Joomla CMS installed on your server and want to install Joomla theme with sample data. The sample data will make your Joomla website appear as at the template preview page with all sample articles, modules and site testing installed.</p>
+          
+                    <p class="error-box">Please note: Installing of the Joomla theme sample data will replace all your Joomla website settings, modules and articles. Do not use this step if you have a ready Joomla website and just want to install the theme. </p>
+                    
+<h3 id="template-installation">Template Installation</h3>
+
+						<p>First of all you need to install the Joomla template and Framework. This can be done through the Joomla administration panel.  Please install the template following the directions in <a href="#getting_started_with_working_site">Getting started if you have the site up</a> part of this manual</p>
+          
+            <p>Our templates are supplied with the sample pages, modules and configuration settings. In other words to make the template look as at the preview you need to install and configure the modules. </p>
+            
+            <h3 id="sample-data-installation">Sample data installation</h3>
+            
+            
+            <p>If you want your site look like the demo you should install the dump.sql file. </p>
+            <p class="notification-box">Please note: the sample data SQL file should be installed only when you are done installing all additional modules and components</p>
+            
+            <div class="notification-box">
+           	ATTENTION: import .sql file ONLY if your site is a clean installation of Joomla! CMS, and you have not yet created any content, articles, modules, etc. This step will erase all the work you've already done to your site. Otherwise, please skip to the - <a href="#modules_configuration">"Manually configuring template modules"</a> step</div>
+                        
+            <p>To install <strong>dump.sql</strong> file you should do the following:</p>
+            
+            <p>Before the dump import please make sure to change the default database prefix in the dump file <strong>("jos_")</strong> to the tables prefix which is used in your Joomla database. In order to find out your Joomla database prefix please login into Joomla Admin, <strong>"Global Configuration" -> "Server"</strong> and find <strong>"Database Tables Prefix"</strong>.             
+<p>Then open your <strong>dump.sql</strong> file with any text editor (preferably Dreamweaver or Notepad) and replace all instances of <strong>"jos_"</strong> with your Joomla database prefix in the entire document using the Find and Replace tool (usually the <strong>Ctrl+H</strong> hot key). E.g.: xyz_   </p>                 
+	        <ul>
+				<li>Open your<strong> PhpMyAdmin</strong> tool (which is part of your Hosting Control Panel).</li>
+				<li>Select the database you created for Joomla! CMS.</li>
+				<li>Select "<strong>IMPORT</strong>" option and click "<strong>Browse</strong>" button</li>
+				<li>Navigate to the "<strong>sources</strong>"  folder of the template and select <strong>dump.sql </strong>file. </li>
+				<li>Press "<strong>GO</strong>" button.</li>
+            </ul>
+			<p>To complete the sample data installation please open the template package, go to the  <strong>"sources/to root directory/"</strong> directory and upload it's content to your Joomla installation root. </p>
+                                 
+			<p>If you don't have much experience with PhpMyAdmin tool, please check <a href="http://templatemonster.com/help/phpmyadmin-how-to-import-sample-data-dump-file.html">this tutorial</a> on how to complete the steps above:</p>
+          </div>
+          
+          
+          
+          <h2 id="getting_started_with_working_site">Getting started if you have the site up</h2>
+          <div class="inner">
+          	<p>The template you ordered is provided with bundle install packages that allow you to install the template and all required extensions in several clicks. </p>
+          	<h3 id="framework_install">Framework Installation</h3>
+            <p>Gantry Framework and all associated plugins can be installed using the <strong>&quot;gantry_bundle.zip&quot;</strong> package located in the template <strong>&quot;joomla&quot;</strong> directory. </p>
+            
+<h4>Installing through the Joomla! CMS Extensions Manager:</h4>
+            <ol>
+            	<li>In the administration section of your Joomla! website go to the <strong>Extensions</strong> - <strong>Extensions Manager</strong>. </li>
+                <li>Then in the "<strong>Upload package file</strong>" section open the Package File upload dialogue box by clicking on the "<strong>Browse</strong>" button.</li>
+                <li>Find the &quot;<strong>gantry_bundle.zip</strong>&quot; archive from the "<strong>sources</strong>" folder in your downloaded template package, click <strong>Open</strong> and then click "<strong>Upload &amp; install</strong>".</li>
+            </ol>
+            
+            <img alt="" src="images/admin_extention_manager.png" title="" />
+            
+ <p>Please note that you may find Gantry Framework to be outdated as of the time of installing your theme. In this case please download the latest version of gantry framework package from the official website at <a href="http://www.gantry-framework.org/download">http://www.gantry-framework.org/download</a>            </p>
+            <p><img alt="" src="images/admin_download_gantry.png" title="" /></p>
+            
+            <p class="info-box">Please make sure you are downloading Gantry framework for Joomla 2.5. The package should be called <strong>gantry_joomla_framework-###.zip</strong></p>
+                                    
+            <h3 id="template_install">Template  installation</h3>
+            <p>Joomla theme can be installed using  &quot;<strong>theme###.zip</strong>&quot; archive located in the &quot;<strong>joomla</strong>&quot; directory of your template package. The archive can be installed as any other Joomla extension through the &quot;<strong>Extensions Manager</strong>&quot; interface as shown above. </p>
+            
+            
+            
+            
+            
+            <h3 id="theme_act">Template Activation</h3>
+            
+            <p>	When you are done with the installation you should activate it. Open the Joomla! administration section, then using the main menu please, go to the "<strong>Extensions - Template manager</strong>" page.</p>
+            <p>Then choose the newly installed template by clicking the checkbox and click "<strong>Make Default</strong>" button in the upper right corner.  This will enable your template as a default one for your site. </p>
+            <p>
+            Then click the template name to enter the template configuration page. You should assign the template to the website pages. To do this click "<strong>Toggle Selection</strong>" button in the "<strong>Menus assignment</strong>" section. 
+            <img alt="" src="images/admin_template_manager.png" title="" />
+            </p>
+            
+            <h3 id="third_party">Third-party extensions installation</h3>
+            
+            <p>The template may have some modules that are not included into the default Joomla! installation and should be installed manually. All extensions are stored in the single bundle archive that is called &quot;<strong>pkg_bundle.zip</strong>&quot; and located in the &quot;<strong>sources</strong>&quot; directory of your template package. The installation procedure is the same as for the template bundle package install.</p>
+              <ol>
+                <li>From the Joomla! administration panel select "<strong>Extensions</strong> - <strong>Extensions Manager</strong>".</li>
+                <li>Click the Browse button and select &quot;<strong>pkg_bundle.zip</strong>&quot; package from the template "<strong>sources</strong>" folder. </li>
+                <li>Click the "<strong>Upload &amp; Install</strong>" button. </li>
+                <li>Then go to the "<strong>Extensions - Module manager</strong>" page. The newly installed module should appear in the modules list.</li>
+              </ol>
+            <p>Open the module and set the configuration options according to the Modules Configuration table below.</p>
+<p class="info-box">You are free to install all extensions manually. In this case please extract &quot;<strong>pkg_bundle.zip</strong>&quot; archive and open &quot;<strong>packages</strong>&quot; folder. There you'll be able to find all third party extensions that are recommended for your particular template. </p>
+            <p class="notification-box">In case you are having issues with the bundle package install please extract files from the package using your archive manager, open &quot;packages&quot; folder and upload all extensions one-by-one using Joomla Extensions Manager interface. </p>
+
+            <h3 id="k2_component">K2 Component</h3>
+            	<p>K2 is a content component for Joomla! with CCK-like features developed by JoomlaWorks. It allows you to manage your content in a multitude of ways quite easily. You can publish blog, catalog, directory and magazine styled sites using a single component and all in one site. Our Joomla templates are designed to be used with K2 component. K2 component is included into the &quot;<strong>pkg_bundle.zip</strong>&quot; package from the template "<strong>sources</strong>" folder so there is no need to install it separately. </p>
+            	<p>If you have Joomla content and is ready to move to K2 you need to import your Joomla articles to K2. Please do the following:</p>
+            	<ol>
+                  <li>Open <strong>K2 </strong>from the Joomla &quot;<strong>Component</strong>&quot; Menu</li>
+                  <li>Click to "<strong>Import Joomla! Content</strong>" button in the top, right hand corner of the К2 Dashboard.</li>
+                  <li>Click on the &quot;<strong>Parameters</strong>&quot; icon in the top, right hand corner of the К2 Dashboard and set your default criteria for ALL k2 content.</li>
+                </ol>
+            <p class="info-box">Please note:  Importing Joomla content in to K2 can be used to transfer the Joomla articles into K2. Skip this step if you don't have any Joomla articles. </p>
+            
+            <h4>&nbsp;</h4>
+<h3 id="modules_configuration">Modules Configuration</h3>
+            	
+            <ul>
+            <li>In the Joomla! administration section please, go to "<strong>Extensions</strong> - <strong>Module Manager</strong>";</li>
+<li>Open each module from the list below, assign it to the given position and set the configuration options from the following table: 
+
+<table id="mod_table">
+<tr>
+		<th>#</th>
+		<th>Name</th>
+		<th>Type</th>
+		<th>Position</th>
+		<th>Class Suffix</th>
+		<th>Show Title</th>
+		<th>Order</th>
+		<th>Pages</th>
+		<th>Additional info</th>
+	</tr>
+<tr>
+		<td>1</td>
+		<td>Slider</td>
+		<td>mod_k2_content</td>
+		<td>showcase-a</td>
+		<td>slider</td>
+		<td>no</td>
+		<td>1</td>
+		<td>Home</td>
+		<td> sub-template: nivo_slider</td>
+	</tr>
+<tr>
+		<td>2</td>
+		<td>Testimonials</td>
+		<td>mod_k2_content</td>
+		<td>bottom-a</td>
+		<td>testimonials</td>
+		<td>yes</td>
+		<td>1</td>
+		<td>All</td>
+		<td>&nbsp;</td>
+	</tr>
+<tr>
+		<td>3</td>
+		<td>Home Top</td>
+		<td>mod_k2_content</td>
+		<td>feature-a</td>
+		<td>cols four</td>
+		<td>no</td>
+		<td>1</td>
+		<td>Home<br />Company Overview</td>
+		<td>&nbsp;</td>
+	</tr>
+<tr>
+		<td>4</td>
+		<td>Home Slider</td>
+		<td>mod_k2_content</td>
+		<td>sidebar-a</td>
+		<td>home-slider</td>
+		<td>no</td>
+		<td>1</td>
+		<td>Home</td>
+		<td> sub-template: anythingslider</td>
+	</tr>
+<tr>
+		<td>5</td>
+		<td>Services</td>
+		<td>mod_custom</td>
+		<td>bottom-b</td>
+		<td></td>
+		<td>yes</td>
+		<td>1</td>
+		<td>All</td>
+		<td>sources/services.html</td>
+	</tr>
+<tr>
+		<td>6</td>
+		<td>Follow Us</td>
+		<td>mod_socialmedialinks</td>
+		<td>bottom-c</td>
+		<td>&nbsp;</td>
+		<td>yes</td>
+		<td>1</td>
+		<td>All</td>
+		<td>sources/mod_socialmedialinks_joomla1.6.zip</td>
+	</tr>
+<tr>
+		<td>7</td>
+		<td>Welcome message</td>
+		<td>mod_custom</td>
+		<td>top-b</td>
+		<td>welcome</td>
+		<td>no</td>
+		<td>2</td>
+		<td>All</td>
+		<td>sources/welcome.html</td>
+	</tr>
+<tr>
+		<td>8</td>
+		<td>User Menu</td>
+		<td>mod_menu</td>
+		<td>top-b</td>
+		<td></td>
+		<td>no</td>
+		<td>1</td>
+		<td>All</td>
+		<td>&nbsp;</td>
+	</tr>
+<tr>
+		<td>9</td>
+		<td>Who we are</td>
+		<td>mod_k2_content</td>
+		<td>feature-a</td>
+		<td></td>
+		<td>yes</td>
+		<td>1</td>
+		<td>About</td>
+		<td>&nbsp;</td>
+	</tr>
+<tr>
+		<td>10</td>
+		<td>job opportunities</td>
+		<td>mod_k2_content</td>
+		<td>feature-c</td>
+		<td></td>
+		<td>yes</td>
+		<td>1</td>
+		<td>About</td>
+		<td>&nbsp;</td>
+	</tr>
+<tr>
+		<td>11</td>
+		<td>History</td>
+		<td>mod_k2_content</td>
+		<td>feature-b</td>
+		<td>history</td>
+		<td>yes</td>
+		<td>1</td>
+		<td>About</td>
+		<td>&nbsp;</td>
+	</tr>
+<tr>
+		<td>12</td>
+		<td>The best of professionals</td>
+		<td>mod_k2_content</td>
+		<td>maintop-a</td>
+		<td>team</td>
+		<td>yes</td>
+		<td>1</td>
+		<td>About</td>
+		<td> sub-template: jcarousel</td>
+	</tr>
+<tr>
+		<td>13</td>
+		<td>our features</td>
+		<td>mod_k2_content</td>
+		<td>mainbottom-a</td>
+		<td>features</td>
+		<td>yes</td>
+		<td>1</td>
+		<td>About</td>
+		<td>&nbsp;</td>
+	</tr>
+<tr>
+		<td>14</td>
+		<td>skills</td>
+		<td>mod_k2_content</td>
+		<td>mainbottom-b</td>
+		<td></td>
+		<td>yes</td>
+		<td>0</td>
+		<td>About</td>
+		<td>&nbsp;</td>
+	</tr>
+<tr>
+		<td>15</td>
+		<td>Expert advice</td>
+		<td>mod_k2_content</td>
+		<td>mainbottom-c</td>
+		<td></td>
+		<td>yes</td>
+		<td>1</td>
+		<td>About</td>
+		<td>&nbsp;</td>
+	</tr>
+<tr>
+		<td>16</td>
+		<td>Risk management</td>
+		<td>mod_k2_content</td>
+		<td>feature-a</td>
+		<td>style-1</td>
+		<td>yes</td>
+		<td>1</td>
+		<td>Services</td>
+		<td>&nbsp;</td>
+	</tr>
+<tr>
+		<td>17</td>
+		<td>Clients relations</td>
+		<td>mod_k2_content</td>
+		<td>feature-b</td>
+		<td>style-1</td>
+		<td>yes</td>
+		<td>1</td>
+		<td>Services</td>
+		<td>&nbsp;</td>
+	</tr>
+<tr>
+		<td>18</td>
+		<td>Insurance service</td>
+		<td>mod_k2_content</td>
+		<td>feature-c</td>
+		<td>style-1</td>
+		<td>yes</td>
+		<td>1</td>
+		<td>Services</td>
+		<td>&nbsp;</td>
+	</tr>
+<tr>
+		<td>19</td>
+		<td>Categories</td>
+		<td>mod_k2_tools</td>
+		<td>sidebar-a</td>
+		<td></td>
+		<td>yes</td>
+		<td>0</td>
+		<td>Blog</td>
+		<td>&nbsp;</td>
+	</tr>
+<tr>
+		<td>20</td>
+		<td>Archives</td>
+		<td>mod_k2_tools</td>
+		<td>sidebar-a</td>
+		<td></td>
+		<td>yes</td>
+		<td>1</td>
+		<td>Blog</td>
+		<td>&nbsp;</td>
+	</tr>
+<tr>
+		<td>21</td>
+		<td>User Login</td>
+		<td>mod_k2_user</td>
+		<td>sidebar-a</td>
+		<td></td>
+		<td>yes</td>
+		<td>1</td>
+		<td>Testimonials<br />FAQs<br />FAQs</td>
+		<td>&nbsp;</td>
+	</tr>
+<tr>
+		<td>22</td>
+		<td>JGMap - Google Map</td>
+		<td>JGMap - Google Map</td>
+		<td>map</td>
+		<td></td>
+		<td>no</td>
+		<td>1</td>
+		<td><p>Contacts, Help, FAQs</p></td>
+		<td>sources/mod_JGMap.zip</td>
+	</tr>
+</table>
+</li>
+			<li>After all the necessary changes are applied save the values of each module by clicking the "<strong>Save &amp; Close</strong>" button in the upper right corner.</li>
+			</ul>
+            <p>If the above table is missing the module for the top navigation menu please check the <a href="#install_menu">Installing Menu</a> step of this manual. </p>
+<p class="notification-box">ATTENTION: By default Joomla! 2.5 installation comes with only couple of modules installed. Therefore to make your Joomla! site look like our live demo please, install all necessary modules through the administration section of your site. You may also need to add all the menu items and articles by yourself.</p>
+            
+			<h3 id="images-preview">Images preview</h3>
+            
+            <p>To display the same images as at the template preview page, please, go to the “<strong>sources/to root directory/</strong>” folder and copy all the folders to your Joomla! installation directory.</p>
+            
+<h3 id="install_menu">Installing menu</h3>
+            
+            <p>Be default this Joomla templates use the mod_superfish_menu module to display the top navigation menu. It can be installed as any other third party module using the Joomla administration panel (<strong>Extensions > Extensions Manager</strong>)</p>
+            
+            <p>Mod_superfish_menu module can be activated and configured at the template settings page (<strong>Extensions > Templates Manager</strong> ). Select your template and at the appeared page click <strong>Menu</strong> tab.</p>
+            
+            <p style="text-align:center;"><img src="images/joomla-framework-menu.jpg" width="637" height="398" alt=""></p>
+                        
+            <h3 id="custom-html">How to add new Custom HTML modules to your template</h3>
+            
+            <p>Some templates may contain the custom HTML modules that should be installed manually.</p>
+            <div class="info-box"> 
+             Note: If you performed the dump.sql file import you may skip this step.
+            </div>
+            <p>
+            Before working with Custom HTML modules we highly recommend to disable the Joomla WYSIWYG editor. </p>
+            <p>Please, enter the Joomla! administration panel, and go to the <strong>Site</strong> → <strong>Global Configuration</strong>. Find the option "<strong>Default Editor</strong>" and select "<strong>No Editor</strong>". Default Joomla! WYSIWYG editors may modify the custom HTML module's code and cause you some issues. 
+            </p>
+            <ul>
+            <li>Then go to the <strong>Extensions → Module Manager</strong> page. Press the "New" button in the top right corner</li>
+			<li>select "<strong>Custom HTML</strong>";</li>
+			<li>in the "<strong>Title</strong>" field type the title of your new module; </li>
+			<li>in the "<strong>Position</strong>" field choose the correct position for the new module from the Modules Configuration table above (Step 4);</li>
+			<li>in the "<strong>Module Class Suffix</strong>" field please, type the appropriate class suffix specified in the Modules Configuration table; </li>
+			<li>in the "<strong>Custom Output</strong>" text area please, put the HTML code provided in the appropriate file from the template "<strong>sources</strong>" folder. The correct filename could be found in the Modules Configuration table.</li>
+            </ul>
+            
+            
+                    <h2 id="conclusion">Conclusion</h2>
+                    <div class="inner">
+                    	<h3>Additional Links</h3>
+                        <ul>
+                        	<li><a href="http://joomla.org" target="_blank">Official website http://joomla.org</a></li>
+                        	<li><a href="http://docs.joomla.org/" target="_blank">Joomla CMS Documentation</a></li>
+                        	<li><a href="http://templatemonster.com/help/cms-blog-templates/joomla/joomla-tutorials/" target="_blank">Joomla tutorials</a></li>
+                            <li><a href="http://www.gantry-framework.org/documentation/joomla/basics/key-features" target="_blank">Gantry Framework documentation</a></li>
+                            <li><a href="http://getk2.org/documentation" target="_blank">K2 component documentation</a></li>
+                        </ul>
+                    </div>   
+                    </div>           
+        </article>
+        <!-- Getting started end -->
+      </section>
+      <!-- footer -->
+      <footer id="footer">
+        <div class="inside">
+        Joomla Framework template</div>
+      </footer>
+    </div>
+  </div>
+</body>
+</html>
