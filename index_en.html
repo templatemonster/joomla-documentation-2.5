@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Joomla Documentation</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="css/bootstrap.css" media="screen">
+  <link rel="stylesheet" href="css/responsive.css" media="screen">
+  <link rel="stylesheet" href="css/style.css" media="screen">
+  <link rel="stylesheet" href="css/flexslider.css"  media="screen">
+  <link rel="stylesheet" href="css/prettify.css"  media="screen">
+  <link rel="stylesheet" href="css/prettyPhoto.css"  media="screen">
+  <script src="js/jquery.js"></script>
+  <script src="js/jquery.scrollTo.js"></script>
+  <script src="js/jquery-migrate-1.1.0.js"></script>
+  <script src="js/prettify.js"></script>
+  <script src="js/jquery.flexslider.js"></script>
+  <script src="js/bootstrap-affix.js"></script>
+  <script type="text/javascript" src="js/jquery.prettyPhoto.js"></script> 
+    <script src="js/scripts.js"></script>
+
+    <!--[if IE 8]>
+    <link rel="stylesheet" href="css/ie.css" />
+  <![endif]-->
+    <!--[if lt IE 8]>
+  		<div style='text-align:center'><a href="http://www.microsoft.com/windows/internet-explorer/default.aspx?ocid=ie6_countdown_bannercode"><img src="http://www.theie6countdown.com/img/upgrade.jpg"border="0"alt=""/></a></div>  
+ 	  <![endif]-->
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.js"></script>
+    <![endif]-->
+</head>
+
+<body>  
+
+<!-- header
+================================================== -->
+<header class="header">
+  <div class="container">
+  <div class="row">
+  <article class="span4"><a class="brand" href="/help/" target="_blank"></a></article>
+ <article class="span6">
+ <h1><img alt="" src="img/joomla_logo.png">Joomla Documentation</h1>
+  </article> 
+  <article class="span2">
+    <div class="languages pull-right">
+      <!-- <span class="lang_label">Language: </span> --><div id="lang_icon"><b>En</b><i class="icon-angle-down"></i></div>
+      <ul id="lang_list">
+        <li class="active"><a href="index.html"><span>English </span><img src="img/flags/gb.png" height="14" width="22" alt="en"></a></li>
+<!--         <li><a href="index_es.html"><span>Español </span><img src="img/flags/es.png" height="14" width="22" alt="es"></a></li>
+        <li><a href="index_de.html"><span>Deutsch </span><img src="img/flags/de.png" height="14" width="22" alt="de"></a></li>
+ -->        <!-- <li><a href="index_ru.html"><span>Русский </span><img src="img/flags/ru.png" height="14" width="22" alt="ru"></a></li> -->
+      </ul>
+    </div>
+  </article>   
+  </div>    
+  </div>
+</header>
+<div id="content"> 
+<div class="bg-content-top">
+<div class="container">
+
+<!-- Docs nav
+    ================================================== -->
+    <div class="row">
+      <div class="span3"> 
+
+        <div id="nav_container">
+          <a href="javascript:;" id="affect_all">
+            <span class="expand">
+              <i class="icon-angle-down"></i>
+            </span>            
+            <span class="close">
+              <i class="icon-angle-up"></i>
+            </span>
+          </a>
+            <div class="clearfix"></div>    
+                <ul class="nav nav-list bs-docs-sidenav"  id="nav">
+                  <li class="nav-item item1">
+                    <dl class="slide-down">
+                       <dt><a href="#prepare" class="icon-check">Preparations</a></dt>  
+                       <dd></dd>                       
+                     </dl> 
+                  </li>           
+                  <li class="nav-item item2">
+                    <dl class="slide-down">
+                       <dt><a href="#сomplete_installation" class="icon-play">Complete installation</a></dt>
+                      <dd></dd>
+                     </dl> 
+                  </li> 
+                  <li class="nav-item item3">
+                    <dl class="slide-down">
+                       <dt><a href="#theme_installation" class="icon-cog">Joomla theme installation</a><i class="icon-sample"></i></dt>
+                         <dd>
+                           <ul class="list">          
+                            <li><a href="#template_installation">Template installation</a></li>
+                            <li><a href="#sample_data_installation">Sample data installation</a></li>      
+                           </ul> 
+                       </dd>
+                     </dl> 
+                  </li> 
+                  <li class="nav-item item4">
+                    <dl class="slide-down">
+                       <dt><a href="#getting_started" class="icon-cogs">Getting started</a> <i class="icon-sample"></i></dt>
+                         <dd>
+                           <ul class="list">          
+                            <li><a href="#framework_installation">Framework installation</a></li>
+                            <li><a href="#installation_template">Template installation</a></li>      
+                            <li><a href="#template_activation">Template activation</a></li>
+                            <li><a href="#extensions_installation">Third-party extensions installation</a></li>
+                            <li><a href="#k2_component">K2 Component</a></li>                    
+                            <li><a href="#modules_configuration">Modules configuration</a></li>
+                            <li><a href="#images_preview">Images preview</a></li>
+                            <li><a href="#installing_menu">Installing menu</a></li>                    
+                            <li><a href="#add_new_custom">How to add new Custom HTML modules to your template</a></li>                    
+                           </ul> 
+                       </dd>
+                     </dl> 
+                  </li> 
+                  <li class="nav-item item5">
+                    <dl class="slide-down">
+                       <dt><a href="#conclusion" class="icon-question-sign">Conclusion</a></dt>
+                       <dd></dd>
+                     </dl> 
+                  </li> 
+                </ul>
+            </div>
+    </div> 
+
+      
+<div class="span9">
+
+<!-- box-content
+================================================== -->
+<div class="box-content">
+<!-- block-started
+================================================== -->
+<section class="block-templates" id="prepare">  
+  <h2><i class="icon-check"></i> Preparations</h2>
+  <div class="inner">
+                    <p>In order to run Joomla template you need to perform some preparations. </p>
+                    <ol>
+                      <li><p>First of all you need to download Joomla engine from the official website and <strong>http://joomla.org</strong>. </p>
+                        <div class="alert alert-block"><strong>Warning!</strong> Please check the template software requirements and make sure you are downloading the required version of Joomla.</div>
+                        <p> From the <a href="http://www.joomla.org/download.html" target="_blank">Downloads</a> page you can get most recent version of Joomla 2.5.</p> 
+                        <p>In case you need earlier versions please use <a href="http://joomlacode.org/gf/project/joomla/frs/?action=index" target="_blank">Download other Joomla </a> packages link</p></li>
+                        
+                        <li>
+                          <p>When the Joomla package is downloaded you need to extract the files from the archive. This can be done using the default archive manager or using such applications as <a href="/help/extract-archived-files-windows-os.html" target="_blank">WinZip (Windows)</a> or <a href="/help/extract-archived-files-mac-os.html" target="_blank">Stuffit Expander (MAC)</a>.</p></li>
+                       
+                        <li><p>Then you need to create a database to store Joomla CMS data. You can create database using your hosting control panel or the phpMyAdmin too in case you are using local server. Feel free to check the details tutorial on <a href="/help/how-create-database.html" target="_blank">how to create database</a>. </p></li>
+                        
+                    </ol>
+                  </div>
+</section>
+
+<section class="block-templates" id="сomplete_installation">  
+  <h2><i class="icon-play"></i> Complete installation. Joomla Engine + Framework + Joomla theme + Sample data</h2>
+
+  <div class="alert alert-info">This installation option is used if you doesn't have Joomla installation on your server. Fullpackage.zip archive used in this guide contains Joomla engine and the theme so you don't need to upload Joomla CMS package separately.</div>
+          
+          <div class="inner">
+            <ol>
+              <li><p>As soon as the template is downloaded and unzipped you should upload the archive <em><strong>joomla/fullpackage.zip</strong></em> using any FTP software like <a href="http://filezilla-project.org/download.php?type=client">Filezilla</a> or the Filemanager in your hosting control panel. The detailed tutorial on <a href="/help/how-upload-files-server-2.html" target="_blank">how to upload files</a> can help you in case of any difficulties. </p></li>
+              <li>
+                <p>When that is done please upload the file<strong> <em>joomla/unzip.php</em></strong> from the template package to the server into the same directory as the previous archive.</p></li>
+              <li><p>As soon as you finish please open your site in the browser and add the file name - <em><strong>unzip.php</strong></em> to the URL. It should look like this: <strong>yourwebsite.com/unzip.php</strong></p></li>
+              <li><p>This is what you get:</p>
+                <figure class="img-polaroid"><img alt="" src="img/interface.png"></figure></li>
+              <li><p>In the drop-down list <strong>&quot;Choose your zip file&quot;</strong> please select <em><strong>fullpackage.zip</strong></em> and click <strong>&quot;Unzip&quot;</strong>. It will start to uncompress the files on your server into the same directory. It will take a little while.</p></li>
+              <li><p>As soon as it is unzipped, you will see the list of files. Please open your site in the browser, - <strong>yourwebsite.com</strong> and start Joomla installation.</p></li>
+              <li>
+                            <p>On Step 6 in your installation - <strong>&quot;Main Configuration&quot;</strong> it is necessary to select <strong>&quot;sample_theme###&quot;</strong> (<em>where ### is the number of your theme</em>) from the select box and click <strong>&quot;Install Sample Data&quot; </strong>button.</p>
+                            <div class="alert alert-error">It is vitally important to install Sample data. Please do not ignore this step</div>
+                <figure class="img-polaroid"><img alt="" src="img/joomla-sample-data-install.jpg" width="788"></figure>
+              </li>
+              <li><p>As soon as the installation is complete, the template with the default content will automatically be activated on your site and will look like the demo on our template preview page.</p></li>
+            </ol>
+                        
+            <div class="alert alert-error">Please note: Installing template sample data you'll have another user with Demo User privileges (full access) added to your database. The sample user login is &quot;demo&quot;, password - &quot;demo123&quot;.</div>
+                        
+            <p>You can delete Demo User though the Joomla administration panel in the <strong>&quot;Users &gt; Users Manager&quot;</strong>. In case you are planning to use sample data we recommend you to change Demo User user login and password. </p>
+            <p>Feel free to check the detailed video tutorial on how to use <a href="/help/joomla-framework-quick-complete-installation.html" target="_blank">Joomla template quick installer</a></p>
+          </div>
+
+          </section>
+
+
+            <section class="block-templates" id="theme_installation">
+              <h2><i class="icon-cog"></i> Joomla theme installation with sample data</h2>
+
+                <div class="inner">
+          
+                    <div class="alert alert-info">This installation option is used in case you already have a Joomla CMS installed on your server and want to install Joomla theme with sample data. The sample data will make your Joomla website appear as at the template preview page with all sample articles, modules and site testing installed.</div>
+          
+                    <div class="alert alert-error">Please note: Installing of the Joomla theme sample data will replace all your Joomla website settings, modules and articles. Do not use this step if you have a ready Joomla website and just want to install the theme.</div>
+                    
+            <h3 id="template_installation">Template installation</h3>
+
+            <p>First of all you need to install the Joomla template and Framework. This can be done through the Joomla administration panel.  Please install the template following the directions in <a href="#getting_started_with_working_site">Getting started if you have the site up</a> part of this manual</p>
+          
+            <p>Our templates are supplied with the sample pages, modules and configuration settings. In other words to make the template look as at the preview you need to install and configure the modules. </p>
+            
+            <h3 id="sample_data_installation">Sample data installation</h3>
+            
+            
+            <p>If you want your site look like the demo you should install the dump.sql file. </p>
+            <div class="alert alert-block"><strong>Warning!</strong> Please note: the sample data SQL file should be installed only when you are done installing all additional modules and components</div><br />
+            
+            <div class="alert alert-block"><strong>Warning!</strong> 
+            Import .sql file ONLY if your site is a clean installation of Joomla! CMS, and you have not yet created any content, articles, modules, etc. This step will erase all the work you've already done to your site. Otherwise, please skip to the - <a href="#modules_configuration">"Manually configuring template modules"</a> step</div><br />
+                        
+            <p>To install <strong>dump.sql</strong> file you should do the following:</p>
+            
+            <p>Before the dump import please make sure to change the default database prefix in the dump file <strong>("jos_")</strong> to the tables prefix which is used in your Joomla database. In order to find out your Joomla database prefix please login into Joomla Admin, <strong>"Global Configuration" -> "Server"</strong> and find <strong>"Database Tables Prefix"</strong>.             
+<p>Then open your <strong>dump.sql</strong> file with any text editor (preferably Dreamweaver or Notepad) and replace all instances of <strong>"jos_"</strong> with your Joomla database prefix in the entire document using the Find and Replace tool (usually the <strong>Ctrl+H</strong> hot key). E.g.: xyz_   </p>                 
+          <ul>
+        <li>Open your<strong> PhpMyAdmin</strong> tool (which is part of your Hosting Control Panel).</li>
+        <li>Select the database you created for Joomla! CMS.</li>
+        <li>Select "<strong>IMPORT</strong>" option and click "<strong>Browse</strong>" button</li>
+        <li>Navigate to the "<strong>sources</strong>"  folder of the template and select <strong>dump.sql </strong>file. </li>
+        <li>Press "<strong>GO</strong>" button.</li>
+            </ul>
+      <p>To complete the sample data installation please open the template package, go to the  <strong>"sources/to root directory/"</strong> directory and upload it's content to your Joomla installation root. </p>
+                                 
+      <p>If you don't have much experience with PhpMyAdmin tool, please check <a href="/help/phpmyadmin-how-to-import-sample-data-dump-file.html">this tutorial</a> on how to complete the steps above:</p>
+          </div>
+    
+</section>
+
+<section id="getting_started">
+  <h2><i class="icon-cogs"></i> Getting started if you have the site up</h2>
+
+  <div class="inner">
+            <p>The template you ordered is provided with bundle install packages that allow you to install the template and all required extensions in several clicks. </p>
+            <h3 id="framework_installation">Framework Installation</h3>
+            <p>Gantry Framework and all associated plugins can be installed using the <strong>&quot;gantry_bundle.zip&quot;</strong> package located in the template <strong>&quot;joomla&quot;</strong> directory. </p>
+            
+<h4>Installing through the Joomla! CMS Extensions Manager:</h4>
+            <ol>
+              <li>In the administration section of your Joomla! website go to the <strong>Extensions</strong> - <strong>Extensions Manager</strong>. </li>
+                <li>Then in the "<strong>Upload package file</strong>" section open the Package File upload dialogue box by clicking on the "<strong>Browse</strong>" button.</li>
+                <li>Find the &quot;<strong>gantry_bundle.zip</strong>&quot; archive from the "<strong>sources</strong>" folder in your downloaded template package, click <strong>Open</strong> and then click "<strong>Upload &amp; install</strong>".</li>
+            </ol>
+            
+            <figure class="img-polaroid"><img alt="" src="img/admin_extention_manager.png" title="" /></figure>
+            
+ <p>Please note that you may find Gantry Framework to be outdated as of the time of installing your theme. In this case please download the latest version of gantry framework package from the official website at <a href="http://www.gantry-framework.org/download">http://www.gantry-framework.org/download</a>            </p>
+            <figure class="img-polaroid"><img alt="" src="img/admin_download_gantry.png" title="" /></figure>
+            
+            <div class="alert alert-info">Please make sure you are downloading Gantry framework for Joomla 2.5. The package should be called <strong>gantry_joomla_framework-###.zip</strong></div>
+                                    
+            <h3 id="installation_template">Template  installation</h3>
+            <p>Joomla theme can be installed using  &quot;<strong>theme###.zip</strong>&quot; archive located in the &quot;<strong>joomla</strong>&quot; directory of your template package. The archive can be installed as any other Joomla extension through the &quot;<strong>Extensions Manager</strong>&quot; interface as shown above. </p>
+            
+            
+            
+            
+            
+            <h3 id="template_activation">Template Activation</h3>
+            
+            <p> When you are done with the installation you should activate it. Open the Joomla! administration section, then using the main menu please, go to the "<strong>Extensions - Template manager</strong>" page.</p>
+            <p>Then choose the newly installed template by clicking the checkbox and click "<strong>Make Default</strong>" button in the upper right corner.  This will enable your template as a default one for your site. </p>
+            <p>
+            Then click the template name to enter the template configuration page. You should assign the template to the website pages. To do this click "<strong>Toggle Selection</strong>" button in the "<strong>Menus assignment</strong>" section. 
+            <figure class="img-polaroid"><img alt="" src="img/admin_template_manager.png" title="" /></figure>
+            </p>
+            
+            <h3 id="extensions_installation">Third-party extensions installation</h3>
+            
+            <p>The template may have some modules that are not included into the default Joomla! installation and should be installed manually. All extensions are stored in the single bundle archive that is called &quot;<strong>pkg_bundle.zip</strong>&quot; and located in the &quot;<strong>sources</strong>&quot; directory of your template package. The installation procedure is the same as for the template bundle package install.</p>
+              <ol>
+                <li>From the Joomla! administration panel select "<strong>Extensions</strong> - <strong>Extensions Manager</strong>".</li>
+                <li>Click the Browse button and select &quot;<strong>pkg_bundle.zip</strong>&quot; package from the template "<strong>sources</strong>" folder. </li>
+                <li>Click the "<strong>Upload &amp; Install</strong>" button. </li>
+                <li>Then go to the "<strong>Extensions - Module manager</strong>" page. The newly installed module should appear in the modules list.</li>
+              </ol>
+            <p>Open the module and set the configuration options according to the Modules Configuration table below.</p>
+<div class="alert alert-info">You are free to install all extensions manually. In this case please extract &quot;<strong>pkg_bundle.zip</strong>&quot; archive and open &quot;<strong>packages</strong>&quot; folder. There you'll be able to find all third party extensions that are recommended for your particular template.</div>
+            <div class="alert alert-block"><strong>Warning!</strong> In case you are having issues with the bundle package install please extract files from the package using your archive manager, open &quot;packages&quot; folder and upload all extensions one-by-one using Joomla Extensions Manager interface.</div>
+
+            <h3 id="k2_component">K2 Component</h3>
+              <p>K2 is a content component for Joomla! with CCK-like features developed by JoomlaWorks. It allows you to manage your content in a multitude of ways quite easily. You can publish blog, catalog, directory and magazine styled sites using a single component and all in one site. Our Joomla templates are designed to be used with K2 component. K2 component is included into the &quot;<strong>pkg_bundle.zip</strong>&quot; package from the template "<strong>sources</strong>" folder so there is no need to install it separately. </p>
+              <p>If you have Joomla content and is ready to move to K2 you need to import your Joomla articles to K2. Please do the following:</p>
+              <ol>
+                  <li>Open <strong>K2 </strong>from the Joomla &quot;<strong>Component</strong>&quot; Menu</li>
+                  <li>Click to "<strong>Import Joomla! Content</strong>" button in the top, right hand corner of the К2 Dashboard.</li>
+                  <li>Click on the &quot;<strong>Parameters</strong>&quot; icon in the top, right hand corner of the К2 Dashboard and set your default criteria for ALL k2 content.</li>
+                </ol>
+            <div class="alert alert-info">Please note:  Importing Joomla content in to K2 can be used to transfer the Joomla articles into K2. Skip this step if you don't have any Joomla articles.</div>
+            
+            <h3 id="modules_configuration">Modules Configuration</h3>
+              
+            <p>In the Joomla! administration section please, go to "<strong>Extensions</strong> - <strong>Module Manager</strong>";</p>
+<p>Open each module from the list below, assign it to the given position and set the configuration options from the following table:</p><br />
+
+<div id="mod_table">
+
+  <div class='module row-fluid'>
+    <div class='span3'><b>1</b> - Login Form</div>
+
+    <div class='span4'>
+      <ul>
+        <li><b>Type:</b> mod_login</li>
+        <li><b>Position:</b> modal</li>
+        <li><b>Class Suffix:</b> </li>
+        <li><b>Show Title:</b> yes</li>
+        <li><b>Order:</b> 1</li>        
+      </ul>
+    </div>
+    <div class='span5'>
+      <ul>
+        <li><b>Pages:</b> All</li>
+        <li></li>
+        <li><b>Additional info:</b> &nbsp;</li>
+      </ul>
+    </div>
+    <div class='clearfix'></div>
+  </div>
+
+  <div class='module row-fluid'>
+    <div class='span3'><b>2</b> - Breadcrumbs</div>
+
+    <div class='span4'>
+      <ul>
+        <li><b>Type:</b> mod_breadcrumbs</li>
+        <li><b>Position:</b> breadcrumbs</li>
+        <li><b>Class Suffix:</b> </li>
+        <li><b>Show Title:</b> no</li>
+        <li><b>Order:</b> 1</li>        
+      </ul>
+    </div>
+    <div class='span5'>
+      <ul>
+        <li><b>Pages:</b> All</li>
+        <li></li>
+        <li><b>Additional info:</b> &nbsp;</li>
+      </ul>
+    </div>
+    <div class='clearfix'></div>
+  </div>
+
+  <div class='module row-fluid'>
+    <div class='span3'><b>3</b> - Search</div>
+
+    <div class='span4'>
+      <ul>
+        <li><b>Type:</b> mod_search</li>
+        <li><b>Position:</b> navigation</li>
+        <li><b>Class Suffix:</b> navbar-search pull-right</li>
+        <li><b>Show Title:</b> no</li>
+        <li><b>Order:</b> 1</li>        
+      </ul>
+    </div>
+    <div class='span5'>
+      <ul>
+        <li><b>Pages:</b> All</li>
+        <li></li>
+        <li><b>Additional info:</b> &nbsp;</li>
+      </ul>
+    </div>
+    <div class='clearfix'></div>
+  </div>
+
+  <div class='module row-fluid'>
+    <div class='span3'><b>4</b> - Copyright</div>
+
+    <div class='span4'>
+      <ul>
+        <li><b>Type:</b> mod_footer</li>
+        <li><b>Position:</b> copyright</li>
+        <li><b>Class Suffix:</b> </li>
+        <li><b>Show Title:</b> no</li>
+        <li><b>Order:</b> 1</li>        
+      </ul>
+    </div>
+    <div class='span5'>
+      <ul>
+        <li><b>Pages:</b> All</li>
+        <li></li>
+        <li><b>Additional info:</b> &nbsp;</li>
+      </ul>
+    </div>
+    <div class='clearfix'></div>
+  </div>
+
+  <div class='module row-fluid'>
+    <div class='span3'><b>5</b> - Archived Articles</div>
+
+    <div class='span4'>
+      <ul>
+        <li><b>Type:</b> mod_articles_archive</li>
+        <li><b>Position:</b> aside-right</li>
+        <li><b>Class Suffix:</b> </li>
+        <li><b>Show Title:</b> yes</li>
+        <li><b>Order:</b> 2</li>        
+      </ul>
+    </div>
+    <div class='span5'>
+      <ul>
+        <li><b>Pages:</b> Blog<br />Blog. Donec eu elit in nisi<br />Blog. In neque arcu vulputate<br />Blog. Quisque gravida purus vitae<br />Blog. Vivamus luctus lectus sit<br />Blog. Vivamus congue turpis in augue<br />Blog. Curabitur eu dignissim velit<br />Archives</li>
+        <li></li>
+        <li><b>Additional info:</b> &nbsp;</li>
+      </ul>
+    </div>
+    <div class='clearfix'></div>
+  </div>
+
+  <div class='module row-fluid'>
+    <div class='span3'><b>6</b> - User Menu</div>
+
+    <div class='span4'>
+      <ul>
+        <li><b>Type:</b> mod_menu</li>
+        <li><b>Position:</b> header</li>
+        <li><b>Class Suffix:</b> </li>
+        <li><b>Show Title:</b> no</li>
+        <li><b>Order:</b> 1</li>        
+      </ul>
+    </div>
+    <div class='span5'>
+      <ul>
+        <li><b>Pages:</b> All</li>
+        <li></li>
+        <li><b>Additional info:</b> &nbsp;</li>
+      </ul>
+    </div>
+    <div class='clearfix'></div>
+  </div>
+
+  <div class='module row-fluid'>
+    <div class='span3'><b>7</b> - Superfish Menu</div>
+
+    <div class='span4'>
+      <ul>
+        <li><b>Type:</b> mod_superfish_menu</li>
+        <li><b>Position:</b> navigation</li>
+        <li><b>Class Suffix:</b> navigation</li>
+        <li><b>Show Title:</b> no</li>
+        <li><b>Order:</b> 1</li>        
+      </ul>
+    </div>
+    <div class='span5'>
+      <ul>
+        <li><b>Pages:</b> All</li>
+        <li></li>
+        <li><b>Additional info:</b> &nbsp;</li>
+      </ul>
+    </div>
+    <div class='clearfix'></div>
+  </div>
+
+  <div class='module row-fluid'>
+    <div class='span3'><b>8</b> - Camera Slideshow</div>
+
+    <div class='span4'>
+      <ul>
+        <li><b>Type:</b> mod_camera_slideshow</li>
+        <li><b>Position:</b> showcase</li>
+        <li><b>Class Suffix:</b> </li>
+        <li><b>Show Title:</b> no</li>
+        <li><b>Order:</b> 1</li>        
+      </ul>
+    </div>
+    <div class='span5'>
+      <ul>
+        <li><b>Pages:</b> Home</li>
+        <li></li>
+        <li><b>Additional info:</b> &nbsp;</li>
+      </ul>
+    </div>
+    <div class='clearfix'></div>
+  </div>
+
+  <div class='module row-fluid'>
+    <div class='span3'><b>9</b> - Social Media</div>
+
+    <div class='span4'>
+      <ul>
+        <li><b>Type:</b> mod_menu</li>
+        <li><b>Position:</b> copyright</li>
+        <li><b>Class Suffix:</b> </li>
+        <li><b>Show Title:</b> no</li>
+        <li><b>Order:</b> 1</li>        
+      </ul>
+    </div>
+    <div class='span5'>
+      <ul>
+        <li><b>Pages:</b> All</li>
+        <li></li>
+        <li><b>Additional info:</b> &nbsp;</li>
+      </ul>
+    </div>
+    <div class='clearfix'></div>
+  </div>
+
+  <div class='module row-fluid'>
+    <div class='span3'><b>10</b> - Login Form</div>
+
+    <div class='span4'>
+      <ul>
+        <li><b>Type:</b> mod_login</li>
+        <li><b>Position:</b> aside-right</li>
+        <li><b>Class Suffix:</b> aside</li>
+        <li><b>Show Title:</b> yes</li>
+        <li><b>Order:</b> 3</li>        
+      </ul>
+    </div>
+    <div class='span5'>
+      <ul>
+        <li><b>Pages:</b> Blog<br />FAQs<br />Testimonials<br />Blog Categories<br />Blog. Donec eu elit in nisi<br />Blog. In neque arcu vulputate<br />Blog. Quisque gravida purus vitae<br />Blog. Vivamus luctus lectus sit<br />Blog. Vivamus congue turpis in augue<br />Blog. Curabitur eu dignissim velit<br />Archives</li>
+        <li></li>
+        <li><b>Additional info:</b> &nbsp;</li>
+      </ul>
+    </div>
+    <div class='clearfix'></div>
+  </div>
+
+  <div class='module row-fluid'>
+    <div class='span3'><b>11</b> - Search</div>
+
+    <div class='span4'>
+      <ul>
+        <li><b>Type:</b> mod_search</li>
+        <li><b>Position:</b> aside-right</li>
+        <li><b>Class Suffix:</b> aside</li>
+        <li><b>Show Title:</b> yes</li>
+        <li><b>Order:</b> 4</li>        
+      </ul>
+    </div>
+    <div class='span5'>
+      <ul>
+        <li><b>Pages:</b> FAQs<br />Testimonials</li>
+        <li></li>
+        <li><b>Additional info:</b> &nbsp;</li>
+      </ul>
+    </div>
+    <div class='clearfix'></div>
+  </div>
+
+  <div class='module row-fluid'>
+    <div class='span3'><b>12</b> - Categories</div>
+
+    <div class='span4'>
+      <ul>
+        <li><b>Type:</b> mod_articles_categories</li>
+        <li><b>Position:</b> aside-right</li>
+        <li><b>Class Suffix:</b> </li>
+        <li><b>Show Title:</b> yes</li>
+        <li><b>Order:</b> 1</li>        
+      </ul>
+    </div>
+    <div class='span5'>
+      <ul>
+        <li><b>Pages:</b> Blog<br />Blog. Donec eu elit in nisi<br />Blog. In neque arcu vulputate<br />Blog. Quisque gravida purus vitae<br />Blog. Vivamus luctus lectus sit<br />Blog. Vivamus congue turpis in augue<br />Blog. Curabitur eu dignissim velit</li>
+        <li></li>
+        <li><b>Additional info:</b> &nbsp;</li>
+      </ul>
+    </div>
+    <div class='clearfix'></div>
+  </div>
+
+  <div class='module row-fluid'>
+    <div class='span3'><b>13</b> - Our Team</div>
+
+    <div class='span4'>
+      <ul>
+        <li><b>Type:</b> mod_articles_news_adv</li>
+        <li><b>Position:</b> mainbottom</li>
+        <li><b>Class Suffix:</b> team</li>
+        <li><b>Show Title:</b> yes</li>
+        <li><b>Order:</b> 1</li>        
+      </ul>
+    </div>
+    <div class='span5'>
+      <ul>
+        <li><b>Pages:</b> About</li>
+        <li></li>
+        <li><b>Additional info:</b> &nbsp;</li>
+      </ul>
+    </div>
+    <div class='clearfix'></div>
+  </div>
+
+  <div class='module row-fluid'>
+    <div class='span3'><b>14</b> - carouFredSel</div>
+
+    <div class='span4'>
+      <ul>
+        <li><b>Type:</b> mod_caroufredsel</li>
+        <li><b>Position:</b> feature</li>
+        <li><b>Class Suffix:</b> </li>
+        <li><b>Show Title:</b> yes</li>
+        <li><b>Order:</b> 1</li>        
+      </ul>
+    </div>
+    <div class='span5'>
+      <ul>
+        <li><b>Pages:</b> Home</li>
+        <li></li>
+        <li><b>Additional info:</b> &nbsp;</li>
+      </ul>
+    </div>
+    <div class='clearfix'></div>
+  </div>
+
+  <div class='module row-fluid'>
+    <div class='span3'><b>15</b> - Article Single</div>
+
+    <div class='span4'>
+      <ul>
+        <li><b>Type:</b> mod_articles_single</li>
+        <li><b>Position:</b> aside-left</li>
+        <li><b>Class Suffix:</b> </li>
+        <li><b>Show Title:</b> yes</li>
+        <li><b>Order:</b> 1</li>        
+      </ul>
+    </div>
+    <div class='span5'>
+      <ul>
+        <li><b>Pages:</b> About</li>
+        <li></li>
+        <li><b>Additional info:</b> &nbsp;</li>
+      </ul>
+    </div>
+    <div class='clearfix'></div>
+  </div>
+
+  <div class='module row-fluid'>
+    <div class='span3'><b>16</b> - Komento Activities</div>
+
+    <div class='span4'>
+      <ul>
+        <li><b>Type:</b> mod_komento_activities</li>
+        <li><b>Position:</b> aside-right</li>
+        <li><b>Class Suffix:</b> </li>
+        <li><b>Show Title:</b> yes</li>
+        <li><b>Order:</b> 1</li>        
+      </ul>
+    </div>
+    <div class='span5'>
+      <ul>
+        <li><b>Pages:</b> Blog<br />Blog Categories<br />Blog. Donec eu elit in nisi<br />Blog. In neque arcu vulputate<br />Blog. Quisque gravida purus vitae<br />Blog. Vivamus luctus lectus sit<br />Blog. Vivamus congue turpis in augue<br />Blog. Curabitur eu dignissim velit</li>
+        <li></li>
+        <li><b>Additional info:</b> &nbsp;</li>
+      </ul>
+    </div>
+    <div class='clearfix'></div>
+  </div>
+
+  <div class='module row-fluid'>
+    <div class='span3'><b>17</b> - Komento Comments</div>
+
+    <div class='span4'>
+      <ul>
+        <li><b>Type:</b> mod_komento_comments</li>
+        <li><b>Position:</b> aside-right</li>
+        <li><b>Class Suffix:</b> </li>
+        <li><b>Show Title:</b> yes</li>
+        <li><b>Order:</b> 1</li>        
+      </ul>
+    </div>
+    <div class='span5'>
+      <ul>
+        <li><b>Pages:</b> Blog<br />Blog Categories<br />Blog. Donec eu elit in nisi<br />Blog. In neque arcu vulputate<br />Blog. Quisque gravida purus vitae<br />Blog. Vivamus luctus lectus sit<br />Blog. Vivamus congue turpis in augue<br />Blog. Curabitur eu dignissim velit</li>
+        <li></li>
+        <li><b>Additional info:</b> &nbsp;</li>
+      </ul>
+    </div>
+    <div class='clearfix'></div>
+  </div>
+
+  <div class='module row-fluid'>
+    <div class='span3'><b>18</b> - mod_twitter_widget</div>
+
+    <div class='span4'>
+      <ul>
+        <li><b>Type:</b> mod_twitter_widget</li>
+        <li><b>Position:</b> aside-left</li>
+        <li><b>Class Suffix:</b> </li>
+        <li><b>Show Title:</b> yes</li>
+        <li><b>Order:</b> 1</li>        
+      </ul>
+    </div>
+    <div class='span5'>
+      <ul>
+        <li><b>Pages:</b> All</li>
+        <li></li>
+        <li><b>Additional info:</b> &nbsp;</li>
+      </ul>
+    </div>
+    <div class='clearfix'></div>
+  </div>
+</div>
+
+
+<br />
+      <p>After all the necessary changes are applied save the values of each module by clicking the "<strong>Save &amp; Close</strong>" button in the upper right corner.</p>
+            <p>If the above table is missing the module for the top navigation menu please check the <a href="#install_menu">Installing Menu</a> step of this manual. </p>
+<div class="alert alert-block"><strong>Warning!</strong> ATTENTION: By default Joomla! 2.5 installation comes with only couple of modules installed. Therefore to make your Joomla! site look like our live demo please, install all necessary modules through the administration section of your site. You may also need to add all the menu items and articles by yourself.</div>
+            
+      <h3 id="images_preview">Images preview</h3>
+            
+            <p>To display the same images as at the template preview page, please, go to the “<strong>sources/to root directory/</strong>” folder and copy all the folders to your Joomla! installation directory.</p>
+            
+<h3 id="installing_menu">Installing menu</h3>
+            
+            <p>Be default this Joomla templates use the mod_superfish_menu module to display the top navigation menu. It can be installed as any other third party module using the Joomla administration panel (<strong>Extensions > Extensions Manager</strong>)</p>
+            
+            <p>Mod_superfish_menu module can be activated and configured at the template settings page (<strong>Extensions > Templates Manager</strong> ). Select your template and at the appeared page click <strong>Menu</strong> tab.</p>
+            
+            <figure class="img-polaroid"><img src="img/joomla-framework-menu.jpg" width="637" height="398" alt=""></figure>
+                        
+            <h3 id="add_new_custom">How to add new Custom HTML modules to your template</h3>
+            
+            <p>Some templates may contain the custom HTML modules that should be installed manually.</p>
+            <div class="alert alert-info"> 
+             Note: If you performed the dump.sql file import you may skip this step.
+            </div>
+            <p>
+            Before working with Custom HTML modules we highly recommend to disable the Joomla WYSIWYG editor. </p>
+            <p>Please, enter the Joomla! administration panel, and go to the <strong>Site</strong> → <strong>Global Configuration</strong>. Find the option "<strong>Default Editor</strong>" and select "<strong>No Editor</strong>". Default Joomla! WYSIWYG editors may modify the custom HTML module's code and cause you some issues. 
+            </p>
+            <ul>
+            <li>Then go to the <strong>Extensions → Module Manager</strong> page. Press the "New" button in the top right corner</li>
+      <li>select "<strong>Custom HTML</strong>";</li>
+      <li>in the "<strong>Title</strong>" field type the title of your new module; </li>
+      <li>in the "<strong>Position</strong>" field choose the correct position for the new module from the Modules Configuration table above (Step 4);</li>
+      <li>in the "<strong>Module Class Suffix</strong>" field please, type the appropriate class suffix specified in the Modules Configuration table; </li>
+      <li>in the "<strong>Custom Output</strong>" text area please, put the HTML code provided in the appropriate file from the template "<strong>sources</strong>" folder. The correct filename could be found in the Modules Configuration table.</li>
+            </ul>
+
+</section>
+
+
+<section id="conclusion" class="block-templates">
+  <h2><i class="icon-question-sign"></i> Conclusion</h2>
+
+  <div class="inner">
+                      <h3>Additional Links</h3>
+                        <ul>
+                          <li><a href="http://joomla.org" target="_blank">Official website http://joomla.org</a></li>
+                          <li><a href="http://docs.joomla.org/" target="_blank">Joomla CMS Documentation</a></li>
+                          <li><a href="/help/cms-blog-templates/joomla/joomla-tutorials/" target="_blank">Joomla tutorials</a></li>
+                            <li><a href="http://www.gantry-framework.org/documentation/joomla/basics/key-features" target="_blank">Gantry Framework documentation</a></li>
+                            <li><a href="http://getk2.org/documentation" target="_blank">K2 component documentation</a></li>
+                        </ul>
+                    </div>
+
+</section>
+
+</div>
+</div>
+</div>
+
+  </div>
+  </div>
+  </div>
+   <!-- Footer
+    ================================================== -->
+    <footer>
+      <div class="container">        
+       Joomla Documentation<br>
+      © 2013 <span id="copyright">Template Monster</span>
+      </div>
+    </footer>
+
+
+  <div id="back-top">
+    <a href="#"><i class="icon-double-angle-up"></i></a>
+  </div>
+    
+<!-- <script src="js/bootstrap-scrollspy.js"></script>  -->
+
+<script type="text/javascript"> 
+  var _gaq = _gaq || []; 
+  _gaq.push(['_setAccount', 'UA-2787305-5']); 
+  _gaq.push(['_trackPageview']); 
+
+  (function() { 
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true; 
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js'; 
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s); 
+  })(); 
+</script>
+    
+</body> 
+
+</html>
